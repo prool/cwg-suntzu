@@ -162,6 +162,8 @@ void init_descriptor (struct descriptor_data *newd, int desc);
 sigfunc *my_signal(int signo, sigfunc *func);
 #endif
 
+int isprool(char c); // prool's modif for isprint
+
 /* extern fcnts */
 void reboot_wizlists(void);
 void boot_world(void);
@@ -2281,7 +2283,7 @@ int process_input(struct descriptor_data *t)
 	  } else
 	    space_left++;
 	}
-      } else if (isascii(*ptr) && isprint(*ptr)) {
+      } else if (isprool(*ptr)) { /* isascii() && isprint() */ // prool: enable non ASCII chars (f.e., cyrillic, UTF-8, etc)
 	if ((*(write_point++) = *ptr) == '$') {		/* copy one character */
 	  *(write_point++) = '$';	/* if it's a $, double it */
 	  space_left -= 2;
@@ -3165,3 +3167,14 @@ void send_to_range(room_vnum start, room_vnum finish, const char *messg, ...)
   }
 }
 
+// prool begin
+// prool here: http://virtustan.net proolix@gmail.com
+int isprool(char c) // prool's modif for isprint
+{
+if ((c<32)&&(c>=0)) return 0;
+if (c==-1) return 0;
+if (c==-2) return 0;
+if (c==-3) return 0;
+return 1;
+}
+// prool end
