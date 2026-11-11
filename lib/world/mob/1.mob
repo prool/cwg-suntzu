@@ -1,0 +1,66 @@
+#100
+impish creature demon imp~
+a @rsmall @bdemon-imp@n~
+There is a @rsmall @bimpish@n looking creature here, squawking chaoticly.
+~
+The little demon stand about @gthree@n feet tall and has a @csingle@n horn in the
+middle of it's forehead. It's pure @Rred@n eyes glare at you as it licks it
+needle-like teeth and @Mdrools@n.
+~
+dju 0 0 0 l 0 0 0 -1000 E
+3 20 7 3d10+6 1d5+1
+0 133 10 3
+8 8 0
+E
+#101
+cleric teacher~
+a @Ycleric of Ao@n~
+A ragged looking @Ycleric of Ao@n is here seaching for escape.
+~
+It looks as if this cleric has spent many years trapped inside the Tower.
+Perhaps @Cdeath@n will be his final release.
+~
+cdiu 0 0 0 0 0 0 0 1000 E
+4 20 6 4d8+8 1d5+1
+0 162 0 1
+8 8 1
+E
+#102
+minotaur~
+a @rminotaur@n~
+A @rminotaur@n is wandering around here.
+~
+Standing over 8 feet tall, the powerful looking @rminotaur@n 
+growls at you when he notices you. He wears nothing but a 
+loin cloth and you can see his powerful bare chest.
+~
+cdflu 0 0 0 l 0 0 0 -750 E
+5 19 5 5d10+10 1d5+1
+25 320 19 3
+8 8 1
+E
+#103
+drow mage~
+a @bdrow@n~
+Hidden in the shadows is a @bdrow mage@n...waiting to strike.
+~
+He is dressed in black, and waiting for the right time to strike.
+~
+abcdfu 0 0 0 l 0 0 0 -1000 E
+6 19 4 6d4+12 1d5+2
+100 500 6 0
+8 8 1
+E
+#104
+test guildmaster~
+a test guildmaster~
+An unfinished mob stands here.
+~
+It looks unfinished.
+~
+du 0 0 0 0 0 0 0 0 E
+1 20 9 1d4+2 1d5+0
+0 125 0 0
+8 8 0
+E
+$

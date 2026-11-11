@@ -1,0 +1,131 @@
+#5100
+goblin slave~
+the goblin slave~
+A goblin slave lies here asleep.
+~
+The defenseless goblin begs for mercy.
+~
+bdhu 0 0 0 l 0 0 0 -1000 E
+3 20 7 3d10+6 1d5+1
+0 133 14 3
+4 4 1
+E
+#5101
+drow commoner~
+a drow commoner~
+A drow commoner is here, walking around on guard duty.
+~
+Typical of most drow you have seen, he is short by elven 
+standards, but has an athletic build.
+~
+cdjlu 0 0 0 l 0 0 0 -1000 E
+10 18 0 10d10+20 1d5+3
+75 3750 6 3
+8 8 1
+E
+#5102
+drow noble warrior~
+a drow warrior noble~
+A drow warrior noble stands here guarding his home.
+~
+The drow warrior stands in unfliching attention, guarding 
+against the enemies of his House.
+~
+cdjlu 0 0 0 el 0 0 0 -1000 E
+12 18 -2 12d10+24 1d5+4
+85 5208 6 3
+8 8 1
+Str: 17
+E
+#5103
+drow noble magi~
+a drow magi noble~
+A drow magi noble is here action as an advisor to his House.
+~
+A trusted advisor of the House, the magi are almost always the 
+first suspected of treason.
+~
+acdjlu 0 0 0 el 0 0 0 -1000 E
+15 17 -5 15d4+30 1d5+5
+90 7500 6 0
+8 8 1
+E
+#5104
+drow priestess~
+a drow priestess~
+A drow priestess is here shouting orders.
+~
+Priestess of Lloth, she is not to be crossed. The priestess 
+are some of the most socially powerful citizens in drow socitey.
+~
+acdjlu 0 0 0 el 0 0 0 -1000 E
+17 17 -7 17d8+34 1d5+5
+100 7058 6 1
+8 8 2
+E
+#5105
+drow master~
+a drow master~
+A drow master stares at you angrily.
+~
+The drow master is ready to defend his House at a moments notice.
+~
+cdjlu 0 0 0 l 0 0 0 -1000 E
+21 16 -11 21d10+42 2d6+7
+110 10000 6 3
+8 8 1
+Str: 18
+E
+#5106
+drow weaponsmaster~
+a weaponsmaster~
+A drow weaponsmaster is here practicing with his blades.
+~
+He definitely know his way around in combat.
+~
+cdjlqu 0 0 0 l 0 0 0 -1000 E
+23 16 -13 23d10+46 2d6+7
+120 10434 6 3
+8 8 1
+Str: 18
+E
+#5107
+drow matron mother~
+the Matron Mother~
+The Matron Mother of the house is standing here.
+~
+Chosen by Lloth to lead the House, the Matron Mother is the extremely
+powerful head of the House.
+~
+acdjlu 0 0 0 el 0 0 0 -1000 E
+24 16 -14 24d8+48 2d6+8
+150 9166 6 1
+8 8 2
+E
+#5108
+drow matron mother~
+the Matron Mother~
+The Matron Mother of the first house is waiting for you.
+~
+Chosen by Lloth to lead the House, the Matron Mother is the extremely
+powerful head of the House.
+~
+acdjlu 0 0 0 el 0 0 0 -1000 E
+25 15 -15 25d8+50 2d6+8
+150 9600 6 1
+8 8 2
+E
+#5109
+yochlol~
+the yochlol~
+A yochlol forms out of a swirling mist...
+~
+One of the many demons at the disposial of Lloth, the Yochlol is an unplesent
+mess to look at. The flesh is putrid and oozing disgusting puss.
+~
+cdjlnopu 0 0 0 elq 0 0 0 -1000 E
+23 16 -13 23d10+46 2d6+7
+0 10434 10 3
+8 8 2
+E
+$

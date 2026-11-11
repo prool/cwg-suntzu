@@ -1,0 +1,138 @@
+#3100
+young man well dressed noble hurm wyvernspur~
+Hurm Wyvernspur~
+You see a well dressed young man wandering around.
+~
+Dressed in all the latest fashions, this young man also wears the crest of
+house Wyvernspur on his cloak.
+~
+cdlu 0 0 0 0 0 0 0 750 E
+6 19 4 6d10+12 1d5+2
+12 533 0 3
+8 8 1
+E
+#3101
+outlaw~
+an outlaw~
+An outlaw is here, looking for something to steal.
+~
+A petty thief, driven out of Kortaal most likey.
+~
+du 0 0 0 0 0 0 0 -500 E
+4 20 6 4d6+8 1d5+1
+17 125 0 2
+8 8 1
+E
+#3102
+ilcurt~
+Ilcurt~
+Ilcurt Elventree, the merchent, is standing here.
+~
+He is an older looking elf, perhaps in his late one hundreds. He watches
+you with passing interest as you look about his store.
+~
+bdsu 0 0 0 0 0 0 0 900 E
+13 18 -3 13d10+26 1d5+4
+120 5769 0 3
+8 8 1
+E
+#3103
+tethgar~
+Tethgar~
+Tethgar the merchant, is standing here, eager to sell you his latest wares.
+~
+He's a young weaponsmith, who still has lots to learn.
+~
+bdsu 0 0 0 0 0 0 0 900 E
+5 19 5 5d10+10 1d5+1
+220 320 0 3
+8 8 1
+E
+#3104
+goblin~
+the goblin~
+A goblin is here looking for something to eat.
+~
+You see before you a small and twisted creature with knotted muscles and
+disgustingly green skin.  Doesn't look like the type you'd invite to dinner.
+~
+cdfu 0 0 0 l 0 0 0 -450 E
+4 20 6 4d10+8 1d5+1
+7 200 14 3
+8 8 1
+E
+#3105
+bandit~
+a bandit~
+A bandit is demanding your money!
+~
+A middle aged thief who has taken to highway robbery.
+~
+du 0 0 0 0 0 0 0 -500 E
+4 20 6 4d6+8 1d5+1
+21 125 0 2
+8 8 1
+E
+#3106
+laele receptionist~
+Laele, the Receptionist~
+Laele, the receptionist of the Nightgate Inn is standing here.
+~
+Older for a human, Laele still has a certain diginity about her that reminds
+you of your mother. You get the feelings she might tell you to wash up and
+go off to bed any minute.
+~
+abcdlsu 0 0 0 0 0 0 0 900 E
+33 14 -23 33d10+66 3d7+11
+0 15151 0 3
+8 8 2
+E
+#3107
+receptionist~
+the Receptionist~
+The receptionist of the Five Fine Fish Inn is standing here.
+~
+The receptionist looks underpaid.
+~
+abcdlsu 0 0 0 0 0 0 0 900 E
+33 14 -23 33d10+66 3d7+11
+0 15151 0 3
+8 8 2
+E
+#3108
+citizen~
+the citizen~
+A citizen of Kaon is standing here.
+~
+An undefined string.~
+cdu 0 0 0 0 0 0 0 900 E
+4 20 6 4d10+8 1d5+1
+6 200 0 3
+8 8 1
+E
+#3109
+citizen tldo~
+the citizen of Tldo~
+A citizen of Tldo is standing here.
+~
+Nothing.
+~
+cdu 0 0 0 0 0 0 0 900 E
+4 20 6 4d10+8 1d5+1
+6 200 0 3
+8 8 1
+E
+#3110
+nelzol~
+Nelzol~
+Nelzol the merchent, is standing here, eager to sell you his latest wares. 
+~
+A human, male, well advanced in his years, seems to enjoy the quite life
+as a shop owner in Kaon.
+~
+bdsu 0 0 0 0 0 0 0 900 E
+20 16 -10 20d10+40 2d6+6
+300 9750 0 3
+8 8 1
+E
+$
