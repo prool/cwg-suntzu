@@ -334,31 +334,31 @@ ACMD(do_reboot)
 
 void boot_world(void)
 {
-  log("Loading zone table.");
+  //log("Loading zone table.");
   index_boot(DB_BOOT_ZON);
 
-  log("Loading triggers and generating index.");
+  //log("Loading triggers and generating index.");
   index_boot(DB_BOOT_TRG);
 
-  log("Loading rooms.");
+  //log("Loading rooms.");
   index_boot(DB_BOOT_WLD);
 
-  log("Renumbering rooms.");
+  //log("Renumbering rooms.");
   renum_world();
 
-  log("Checking start rooms.");
+  //log("Checking start rooms.");
   check_start_rooms();
 
-  log("Loading mobs and generating index.");
+  //log("Loading mobs and generating index.");
   index_boot(DB_BOOT_MOB);
 
-  log("Loading objs and generating index.");
+  //log("Loading objs and generating index.");
   index_boot(DB_BOOT_OBJ);
 
-  log("Renumbering zone table.");
+  //log("Renumbering zone table.");
   renum_zone_table();
 
-  log("Loading disabled commands list...");
+  //log("Loading disabled commands list...");
   load_disabled();
 
   if(converting) {
@@ -367,10 +367,10 @@ void boot_world(void)
   }
 
   if (!no_specials) {
-    log("Loading shops.");
+    //log("Loading shops.");
     index_boot(DB_BOOT_SHP);
 
-    log("Loading guild masters.");
+    //log("Loading guild masters.");
     index_boot(DB_BOOT_GLD);
   }
 
@@ -597,12 +597,12 @@ void boot_db(void)
 {
   zone_rnum i;
 
-  log("Boot db -- BEGIN.");
+  //log("Boot db -- BEGIN.");
 
   log("Resetting the game time:");
   reset_time();
 
-  log("Reading news, credits, help, ihelp, bground, info & motds.");
+  //log("Reading news, credits, help, ihelp, bground, info & motds.");
   file_to_string_alloc(NEWS_FILE, &news);
   file_to_string_alloc(CREDITS_FILE, &credits);
   file_to_string_alloc(MOTD_FILE, &motd);
@@ -620,20 +620,20 @@ void boot_db(void)
   if (file_to_string_alloc(GREETANSI_FILE, &GREETANSI) == 0)
     prune_crlf(GREETANSI);
 
-  log("Loading spell definitions.");
+  //log("Loading spell definitions.");
   mag_assign_spells();
 
   boot_world();
 
   htree_test();
 
-  log("Loading help entries.");
+  //log("Loading help entries.");
   index_boot(DB_BOOT_HLP);
 
-  log("Setting up context sensitive help system for OLC");
+  //log("Setting up context sensitive help system for OLC");
   boot_context_help();
 
-  log("Generating player index.");
+  //log("Generating player index.");
   build_player_index();
 
   insure_directory(LIB_PLROBJS "CRASH", 0);
@@ -643,59 +643,59 @@ void boot_db(void)
     clean_pfiles();
   }
 
-  log("Loading fight messages.");
+  //log("Loading fight messages.");
   load_messages();
 
-  log("Loading social messages.");
+  //log("Loading social messages.");
   boot_social_messages();
 
-  log("Building command list.");
+  //log("Building command list.");
   create_command_list(); /* aedit patch -- M. Scott */
 
-  log("Assigning function pointers:");
+  //log("Assigning function pointers:");
 
   if (!no_specials) {
-    log("   Mobiles.");
+    //log("   Mobiles.");
     assign_mobiles();
-    log("   Shopkeepers.");
+    //log("   Shopkeepers.");
     assign_the_shopkeepers();
-    log("   Objects.");
+    //log("   Objects.");
     assign_objects();
-    log("   Rooms.");
+    //log("   Rooms.");
     assign_rooms();
-    log("   Guildmasters.");
+    //log("   Guildmasters.");
     assign_the_guilds();
   }
 
-  log("Init Object Unique Hash");
+  //log("Init Object Unique Hash");
   init_obj_unique_hash();
 
-  log("Booting assembled objects.");
+  //log("Booting assembled objects.");
   assemblyBootAssemblies();
 
-  log("Assigning spell and skill levels.");
+  //log("Assigning spell and skill levels.");
   init_spell_levels();
 
-  log("Assigning race spell and skill levels.");
+  //log("Assigning race spell and skill levels.");
   init_spell_race_levels();
 
-  log("Assigning skills and spells to mobiles.");
+  //log("Assigning skills and spells to mobiles.");
   init_mobile_skills();
 
-  log("Sorting command list and spells.");
+  //log("Sorting command list and spells.");
   sort_commands();
   sort_spells();
 
-  log("Booting mail system.");
+  //log("Booting mail system.");
   if (!scan_file()) {
     log("    Mail boot failed -- Mail system disabled");
     no_mail = 1;
   }
   
-  log("Booting boards system.");
+  //log("Booting boards system.");
   init_boards();
   
-  log("Reading banned site and invalid-name list.");
+  //log("Reading banned site and invalid-name list.");
   load_banned();
   Read_Invalid_List();
 
@@ -707,13 +707,15 @@ void boot_db(void)
 
   /* Moved here so the object limit code works. -gg 6/24/98 */
   if (!mini_mud) {
-    log("Booting houses.");
+    //log("Booting houses.");
     House_boot();
   }
 
   for (i = 0; i <= top_of_zone_table; i++) {
+#if 0 // by prool
     log("Resetting #%d: %s (rooms %d-%d).", zone_table[i].number,
 	zone_table[i].name, zone_table[i].bot, zone_table[i].top);
+#endif
     reset_zone(i);
   }
 
@@ -721,7 +723,7 @@ void boot_db(void)
 
   boot_time = time(0);
 
-  log("Boot db -- DONE.");
+  //log("Boot db -- DONE.");
 }
 
 
