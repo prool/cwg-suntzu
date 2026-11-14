@@ -2182,7 +2182,7 @@ int process_input(struct descriptor_data *t)
 
   do {
     if (space_left <= 0) {
-      log("WARNING: process_input: about to close connection: input overflow");
+      //log("WARNING: process_input: about to close connection: input overflow");
       return (-1);
     }
 
