@@ -700,9 +700,9 @@ void boot_db(void)
   Read_Invalid_List();
 
   if (!no_rent_check) {
-    log("Deleting timed-out crash and rent files:");
+    //log("Deleting timed-out crash and rent files:");
     update_obj_file();
-    log("   Done.");
+    //log("   Done.");
   }
 
   /* Moved here so the object limit code works. -gg 6/24/98 */

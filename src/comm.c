@@ -1156,8 +1156,8 @@ void record_usage(void)
       sockets_playing++;
   }
 
-  log("nusage: %-3d sockets connected, %-3d sockets playing",
-	  sockets_connected, sockets_playing);
+  /* log("nusage: %-3d sockets connected, %-3d sockets playing",
+	  sockets_connected, sockets_playing); */
 
 #ifdef RUSAGE	/* Not RUSAGE_SELF because it doesn't guarantee prototype. */
   {
@@ -1730,8 +1730,10 @@ int new_descriptor(socket_t s)
 				      sizeof(peer.sin_addr), AF_INET))) {
 
     /* resolution failed */
+#if 0 // by prool
     if (!CONFIG_NS_IS_SLOW)
       perror("SYSERR: gethostbyaddr");
+#endif
 
     /* find the numeric site address */
     strncpy(newd->host, (char *)inet_ntoa(peer.sin_addr), HOST_LENGTH);	/* strncpy: OK (n->host:HOST_LENGTH+1) */
